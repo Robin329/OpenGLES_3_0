@@ -66,6 +66,8 @@ import static com.byteflow.app.MyNativeRender.SAMPLE_TYPE_KEY_BEZIER_CURVE;
 import static com.byteflow.app.MyNativeRender.SAMPLE_TYPE_KEY_BIG_EYES;
 import static com.byteflow.app.MyNativeRender.SAMPLE_TYPE_KEY_BIG_HEAD;
 import static com.byteflow.app.MyNativeRender.SAMPLE_TYPE_KEY_CLOUD;
+import static com.byteflow.app.MyNativeRender.SAMPLE_TYPE_KEY_BLIT_FRAME_BUFFER;
+import static com.byteflow.app.MyNativeRender.SAMPLE_TYPE_KEY_COPY_TEXTURE;
 import static com.byteflow.app.MyNativeRender.SAMPLE_TYPE_KEY_FACE_SLENDER;
 import static com.byteflow.app.MyNativeRender.SAMPLE_TYPE_KEY_FBO_BLIT;
 import static com.byteflow.app.MyNativeRender.SAMPLE_TYPE_KEY_HWBuffer;
@@ -154,8 +156,9 @@ public class MainActivity extends AppCompatActivity implements AudioCollector.Ca
                 "GL Transitions_4",
                 "RGB to NV21",
                 "RGB to I420",
-                "",
-                "",
+                "RGB to I444",
+                "Copy Texture",
+                "Blit Frame Buffer",
                 "DrawRectangle",
         };
 
@@ -265,7 +268,7 @@ public class MainActivity extends AppCompatActivity implements AudioCollector.Ca
     public void onSensorChanged(SensorEvent event) {
         switch (event.sensor.getType()) {
             case Sensor.TYPE_GRAVITY:
-//                Log.d(TAG, "onSensorChanged() called with TYPE_GRAVITY: [x,y,z] = [" + event.values[0] + ", " + event.values[1] + ", " + event.values[2] + "]");
+                Log.d(TAG, "onSensorChanged() called with TYPE_GRAVITY: [x,y,z] = [" + event.values[0] + ", " + event.values[1] + ", " + event.values[2] + "]");
                 if(mSampleSelectedIndex + SAMPLE_TYPE == SAMPLE_TYPE_KEY_AVATAR)
                 {
                     mGLRender.setGravityXY(event.values[0], event.values[1]);
@@ -340,7 +343,13 @@ public class MainActivity extends AppCompatActivity implements AudioCollector.Ca
                     case SAMPLE_TYPE_VAO:
                         break;
                     case SAMPLE_TYPE_FBO:
-                        loadRGBAImage(R.drawable.java);
+                    case SAMPLE_TYPE_KEY_COPY_TEXTURE:
+                    case SAMPLE_TYPE_KEY_BLIT_FRAME_BUFFER:
+                    {
+                        Bitmap bitmap = loadRGBAImage(R.drawable.lye);
+                        mGLSurfaceView.setAspectRatio(bitmap.getWidth(), bitmap.getHeight());
+                    }
+
                         break;
                     case SAMPLE_TYPE_FBO_LEG:
                         loadRGBAImage(R.drawable.leg);

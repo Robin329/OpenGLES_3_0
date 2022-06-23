@@ -6,20 +6,19 @@
  *
  * */
 
-
-#ifndef NDK_OPENGLES_3_0_FBOSAMPLE_H
-#define NDK_OPENGLES_3_0_FBOSAMPLE_H
+#ifndef NDK_OPENGLES_3_0_BLITFRAMEBUFFEREXAMPLE_H
+#define NDK_OPENGLES_3_0_BLITFRAMEBUFFEREXAMPLE_H
 
 
 #include "GLSampleBase.h"
 #include "../util/ImageDef.h"
 
-class FBOSample : public GLSampleBase
+class BlitFrameBufferExample : public GLSampleBase
 {
 public:
-	FBOSample();
+	BlitFrameBufferExample();
 
-	virtual ~FBOSample();
+	virtual ~BlitFrameBufferExample();
 
 	virtual void LoadImage(NativeImage *pImage);
 
@@ -46,4 +45,4 @@ private:
 };
 
 
-#endif //NDK_OPENGLES_3_0_FBOSAMPLE_H
+#endif //NDK_OPENGLES_3_0_BLITFRAMEBUFFEREXAMPLE_H

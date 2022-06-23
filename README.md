@@ -4,13 +4,15 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/githubhaohao/NDK_OpenGLES_3_0/blob/master/LICENSE.txt)
 ![Build](https://img.shields.io/badge/build-passing-brightgreen)
 [![apk](https://img.shields.io/badge/APK-download-green.svg)](https://github.com/githubhaohao/NDK_OpenGLES_3_0/raw/master/doc/OepnGLES.apk)
+[![GitHub stars](https://img.shields.io/github/stars/githubhaohao/NDK_OpenGLES_3_0)](https://github.com/githubhaohao/NDK_OpenGLES_3_0/stargazers)
 
+备注: 请使用 **Android Studio 4.1+ ，NDK r21，其中一些 Case 的 3D 效果是通过手势触发（转动和缩放）**
 
-备注: 请使用 Android Studio 4.1+ ，NDK r21，其中一些 Case 的 3D 效果是通过手势触发（转动和缩放）
+## 作者声明
 
+有读者反馈，最近有培训机构将本教程进行打包售卖，严重违背了本项目免费开源的初衷。再次声明：**任何商业机构或个人未经作者【微信ID：Byte-Flow 】许可，不得将本教程及其项目配套代码用于 "打包贩卖、出书和卖课" 等商业用途，一经发现，全网声讨。再次感谢各位读者的监督和反馈。**
 
 ## 展示图
-
 
 ![beating_heart](https://github.com/githubhaohao/NDK_OpenGLES_3_0/blob/master/gif/beating_heart.gif)
 ![poly_3d_model](https://github.com/githubhaohao/NDK_OpenGLES_3_0/blob/master/gif/poly.gif)
@@ -116,7 +118,7 @@
 
 - [OpenGL ES 文字渲染进阶：渲染中文字体](https://t.1yb.co/vezw)
 
-- [OpenGL ES + 人像抠图实现人像留色](https://t.1yb.co/z84y) 
+- [OpenGL ES + 人像抠图实现人像留色](https://t.1yb.co/z84y)
 
 - [OpenGL ES + GLTranslations 实现各种图像转场效果](https://t.1yb.co/z8do)
 
@@ -128,12 +130,13 @@
 
 - [OpenGL ES 修图（P 图）功能](https://juejin.cn/post/7029111228035399688)
 
-
 ## 相关推荐
 
 - [Android OpenGL Camera 2.0 实现 30 种滤镜和抖音特效](https://github.com/githubhaohao/OpenGLCamera2)
 - [Android FFmpeg 音视频开发教程](http://mp.weixin.qq.com/s?__biz=MzIwNTIwMzAzNg==&mid=506681298&idx=1&sn=50177285bf0d330d0dfc4e0954d5ad12&chksm=0cf384e13b840df76f89aeb8ac76939ff32b2f9bf600729782d61698181af60d92cce61ee150#rd)
 
 ## 联系交流
+
 有疑问或技术交流可以ISSUE。
+
 
