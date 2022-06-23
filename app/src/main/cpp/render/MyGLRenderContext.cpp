@@ -50,12 +50,9 @@
 #include <ConveyorBeltExample.h>
 #include <RGB2NV21Sample.h>
 #include <RGB2I420Sample.h>
-<<<<<<< HEAD
-=======
 #include <RGB2I444Sample.h>
 #include <CopyTextureExample.h>
 #include <BlitFrameBufferExample.h>
->>>>>>> upstream/master
 #include "MyGLRenderContext.h"
 #include "LogUtil.h"
 
@@ -97,19 +94,12 @@ void MyGLRenderContext::SetParamsInt(int paramType, int value0, int value1)
 
 		switch (value0)
 		{
-<<<<<<< HEAD
             case SAMPLE_TYPE_KEY_RECTANGLE:
                 m_pCurSample = new RectangleSample();
 				break;
 			case SAMPLE_TYPE_KEY_TRIANGLE:
 				m_pCurSample = new TriangleSample();
 				break;
-
-=======
-			case SAMPLE_TYPE_KEY_TRIANGLE:
-				m_pCurSample = new TriangleSample();
-				break;
->>>>>>> upstream/master
 			case SAMPLE_TYPE_KEY_TEXTURE_MAP:
 				m_pCurSample = new TextureMapSample();
 				break;
@@ -239,8 +229,6 @@ void MyGLRenderContext::SetParamsInt(int paramType, int value0, int value1)
             case SAMPLE_TYPE_KEY_RGB2I420:
                 m_pCurSample = new RGB2I420Sample();
                 break;
-<<<<<<< HEAD
-=======
 			case SAMPLE_TYPE_KEY_RGB2I444:
 				m_pCurSample = new RGB2I444Sample();
 				break;
@@ -250,7 +238,6 @@ void MyGLRenderContext::SetParamsInt(int paramType, int value0, int value1)
             case SAMPLE_TYPE_KEY_BLIT_FRAME_BUFFER:
                 m_pCurSample = new BlitFrameBufferExample();
                 break;
->>>>>>> upstream/master
 			default:
 			    m_pCurSample = nullptr;
 				break;

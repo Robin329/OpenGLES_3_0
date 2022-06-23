@@ -157,6 +157,7 @@ public class MainActivity extends AppCompatActivity implements AudioCollector.Ca
                 "RGB to NV21",
                 "RGB to I420",
                 "RGB to I444",
+                "Rectangle",
                 "Copy Texture",
                 "Blit Frame Buffer",
                 "DrawRectangle",
